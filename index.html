@@ -12,21 +12,23 @@
         padding: 0;
     }
     .container {
-        width: 95%;
-        max-width: 1200px;
-        margin: 20px auto;
-        overflow: hidden;
+        width: 100%;
+        max-width: 1200px; /* Limiting max width */
+        margin: 20px auto; /* Center aligning the container */
+        overflow-x: auto; /* Enables horizontal scrolling */
     }
     .tennis-image {
-        width: 100%;
+        width: 100%; /* Image takes full width of the container */
         height: auto;
         display: block;
-        margin-bottom: 20px;
+        margin-left: auto; /* Center align image */
+        margin-right: auto;
     }
     .table-style {
         border-collapse: collapse;
-        width: 100%;
-        margin-bottom: 20px;
+        width: 100%; /* Table takes full width of the container */
+        margin-left: auto; /* Center align table */
+        margin-right: auto;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
     .table-style th, .table-style td {
@@ -47,8 +49,11 @@
         background-color: #FF6347;
     }
     @media screen and (max-width: 600px) {
+        .container {
+            padding: 0 10px; /* Adding some padding on smaller screens */
+        }
         .table-style, .table-style th, .table-style td {
-            font-size: 12px;
+            font-size: 14px;
         }
     }
 </style>
@@ -56,7 +61,7 @@
 <body>
 
 <div class="container">
-    <img src="image_tennis.png" alt="Tennis Match" class="tennis-image">
+    <img src="tennis.png" alt="Tennis Match" class="tennis-image">
     <table border="1" class="dataframe table-style">
   <thead>
     <tr style="text-align: right;">
