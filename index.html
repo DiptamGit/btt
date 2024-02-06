@@ -16,21 +16,6 @@
         margin: 20px auto; /* Center aligning the container */
         overflow-x: auto; /* Enables horizontal scrolling */
       }
-      /* Make the top row sticky */
-.table-style th {
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    background-color: #FFF; /* Adjust the background color as needed */
-}
-
-/* Make the second column sticky */
-.table-style th:nth-child(2), .table-style td:nth-child(2) {
-    position: sticky;
-    left: 0;
-    z-index: 1;
-    background-color: #FFF; /* Adjust the background color as needed */
-}
       .tennis-image {
         width: 100%; /* Image takes full width of the container */
         height: auto;
@@ -53,7 +38,7 @@
       }
       .table-style th {
         background-color: #03918c;
-        color: white;
+        color: rgb(0, 0, 0);
       }
       .table-style tr:nth-child(even) {
         background-color: #f2f2f2;
@@ -665,7 +650,16 @@
     <script>
       document.addEventListener("DOMContentLoaded", function () {
         var table = document.querySelector(".table-style");
-
+        if (table) {
+        var headerCells = table.querySelectorAll('thead th');
+        for (var i = 0; i < headerCells.length; i++) {
+            headerCells[i].style.position = '-webkit-sticky'; // For Safari
+            headerCells[i].style.position = 'sticky';
+            headerCells[i].style.top = '0';
+            headerCells[i].style.backgroundColor = '#FFF'; // Adjust the background color as needed
+            headerCells[i].style.zIndex = '2'; // Ensures the header is above other content
+        }
+    }
         // Add class based on cell content
         table.querySelectorAll("td").forEach(function (cell) {
           if (cell.textContent === "Y") {
