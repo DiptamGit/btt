@@ -23,19 +23,12 @@
         z-index: 2;
       }
 
-      /* Make the first two columns sticky */
-      .table-style th:first-child,
-      .table-style td:first-child,
+      /* Make the second column sticky */
       .table-style th:nth-child(2),
       .table-style td:nth-child(2) {
         position: sticky;
         left: 0;
         z-index: 1;
-      }
-
-      /* Ensure the top-left cell overlaps correctly */
-      .table-style th:first-child {
-        z-index: 3;
       }
       .tennis-image {
         width: 100%; /* Image takes full width of the container */
