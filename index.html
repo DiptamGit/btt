@@ -17,19 +17,20 @@
         overflow-x: auto; /* Enables horizontal scrolling */
       }
       /* Make the top row sticky */
-      .table-style th {
-        position: sticky;
-        top: 0;
-        z-index: 2;
-      }
+.table-style th {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #FFF; /* Adjust the background color as needed */
+}
 
-      /* Make the second column sticky */
-      .table-style th:nth-child(2),
-      .table-style td:nth-child(2) {
-        position: sticky;
-        left: 0;
-        z-index: 1;
-      }
+/* Make the second column sticky */
+.table-style th:nth-child(2), .table-style td:nth-child(2) {
+    position: sticky;
+    left: 0;
+    z-index: 1;
+    background-color: #FFF; /* Adjust the background color as needed */
+}
       .tennis-image {
         width: 100%; /* Image takes full width of the container */
         height: auto;
